@@ -1,6 +1,7 @@
 FROM pytorch/pytorch:latest
 MAINTAINER nako.sung@navercorp.com
 
+RUN apt update && apt install -y git build-essential cmake
 RUN git clone https://github.com/kakao/khaiii.git
 WORKDIR /workspace/khaiii
 
